@@ -1,10 +1,9 @@
 interface ForecastCardProps {
   day: string; 
   temp: number;
-  icon: string;
 }
 
-const ForecastCard = ({ day, temp, icon }: ForecastCardProps) => {
+const ForecastCard = ({ day, temp,  }: ForecastCardProps) => {
   return (
     <div className="forecastLayout">
       <h1 className="forecastDay">{day}</h1> 

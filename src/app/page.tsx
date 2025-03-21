@@ -1,10 +1,10 @@
 "use client";
-import Head from "next/head";
 import SearchBar from "@/components/Searchbar";
 import ForecastCard from "@/components/ForecastCard";
 import FavoritesList from "@/components/FavoritesList";
 import { useState, useEffect } from "react";
 import TodayCard from "@/components/TodayCard";
+import Image from "next/image";
 
 const API_KEY = "2a81aae1fd6131a7dd0e3509c4a72374";
 
@@ -157,12 +157,6 @@ export default function Home() {
   };
 
   return (
-<>
-    <Head>
-        <title>WeatherBite</title>
-        <meta name="description" content="Check the latest weather updates and forecasts with WeatherBite." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
     <div>
 
@@ -199,10 +193,9 @@ export default function Home() {
       <div className="weeklyContainer">
         <FavoritesList favorites={favorites} onSelect={fetchWeather} onDelete={removeFromFavorites} />
         {forecast.length > 0 && forecast.map((day, index) => (
-          <ForecastCard key={index} day={day.day} temp={Math.round(day.main.temp)} icon={day.weather[0].icon} />
+          <ForecastCard key={index} day={day.day} temp={Math.round(day.main.temp)}  />
         ))}
       </div>
     </div>
-    </>
   );
 }
