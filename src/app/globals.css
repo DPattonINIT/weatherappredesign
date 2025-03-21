@@ -1,26 +1,232 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: Playfair;
+  src: url(/public/font/Playfair/PlayfairDisplay-VariableFont_wght.ttf);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/images/dashimage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Playfair, serif;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+.searchInput {
+  width: 350px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.searchInput::placeholder {
+  color: #777;
+  font-weight: bold;
+}
+
+.searchButton {
+  background-color: #f1c40f;
+  border: 2px solid #333;
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.searchButton:hover {
+  background-color: #d4ac0d;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.todayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  width: 420px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid black;
+}
+.todayText {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.tempHighLow {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tempText {
+  color: red;
+  font-weight: bold;
+}
+.weeklyContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.cardBox {
+  background-color: white;
+  height: 230px;
+  width: 220px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid black;
+}
+.forecastLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.forecastDay {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.favoritesBox {
+  background-color: white;
+  height: 230px;
+  width: 220px;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid black;
+}
+
+.favTitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.favoriteContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.favoriteBTN {
+  border-radius: 8px;
+  background-color: #f1c40f;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.favoriteBTN:hover {
+  background-color: #d4ac0d;
+}
+
+.removeBTN {
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.removeBTN:hover {
+  background-color: darkred;
+}
+
+.foodContainer {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  margin-right: 40px;
+  max-width: 420px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.foodTitle {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.foodDesc {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.instructionsTitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.cityText {
+  font-size: 19px;
+  font-weight: bold;
+}
+.todayText {
+  font-size: 28px;
+}
+.text {
+  font-weight: bold;
+}
+.searchBTN {
+  background-color: #f1c40f;
+  border-radius: 5px;
+}
+.searchBTN:hover {
+  background-color: #d4ac0d;
+}
+.forecastDay {
+  font-size: 22px;
+}
+.forecastTemp {
+  color: red;
+}
+.favCity {
+  cursor: pointer;
 }
