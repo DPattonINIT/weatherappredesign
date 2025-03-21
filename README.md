@@ -11,3 +11,9 @@ WeatherBite is a weather application built with Next.js and TypeScript, allowing
 
 
 // Person who Peer Reviewed your assignment
+
+Vercel:
+
+
+Figma:
+https://www.figma.com/proto/aCRIlAZyaR1d7sjz9nuic7/WeatherBite!?node-id=0-1&t=XtVodIl09ykrR8Ii-1
