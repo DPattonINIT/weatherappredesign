@@ -182,7 +182,8 @@ export default function Home() {
 
           {foodRecommendation && (
             <div className="foodContainer">
-              <h2 className="foodTitle">Today's Recommendation</h2>
+              <h2 className="foodTitle">Today&apos;s Recommendation</h2>
+
               <p className="foodDesc">{foodRecommendation}</p>
             </div>
           )}
