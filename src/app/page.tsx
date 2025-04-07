@@ -4,7 +4,7 @@ import ForecastCard from "@/components/ForecastCard";
 import FavoritesList from "@/components/FavoritesList";
 import { useState, useEffect } from "react";
 import TodayCard from "@/components/TodayCard";
-import Image from "next/image";
+// import Image from "next/image";
 
 const API_KEY = "2a81aae1fd6131a7dd0e3509c4a72374";
 
